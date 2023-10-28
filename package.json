@@ -4,13 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client": "cd client && yarn start",
-    "server": "nodemon index.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "dev:server": "cd client && yarn build && cd .. && yarn start",
     "start": "node index.js",
-    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
-    
+    "heroku-postbuild": "npm install --only=production"
   },
   "author": "",
   "license": "ISC",
@@ -20,7 +15,6 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mongodb": "^5.7.0",
-    "mongoose": "^7.4.3",
-    "nodemon": "^3.0.1"
+    "mongoose": "^7.4.3"
   }
 }
