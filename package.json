@@ -1,20 +1,15 @@
 {
-  "name": "server",
+  "name": "my-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Açıklama",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords": [],
+  "author": "A. Uthor",
   "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.20.2",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "mongodb": "^5.7.0",
-    "mongoose": "^7.4.3"
-  }
+  "dependencies": {}
 }
